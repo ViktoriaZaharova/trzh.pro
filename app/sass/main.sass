@@ -70,6 +70,8 @@ body
   line-height: normal
   font-family: $default-font
   font-weight: normal
+  color: #323732
+  background: #fff
 
 html, body
   overflow-x: hidden
@@ -95,9 +97,504 @@ input, textarea, select
   outline: none
   box-shadow: none
   appearance: none
-  padding: 0
   box-sizing: border-box
-  
+  font-family: $default-font
+  cursor: pointer
+  width: 100%
+  height: 50px
+  background: #EDF1F5
+  padding: 0 26px
+  font-size: 18px
+  color: #000
+  &::placeholder
+    color: #838588
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+label
+  display: block
+
+.btn, button
+  outline: none
+  cursor: pointer
+  transition: .3s ease
+  font-family: $default-font
+  box-shadow: none
+  border: none
+    radius: 0
+  background: transparent
+  padding: 0
+  margin: 0
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn-burger
+  display: none
+  width: 24px
+  cursor: pointer
+  span
+    width: 100%
+    height: 2px
+    background: $green
+    border-radius: 3px
+    margin: 0 0 4px
+    display: block
+    &:last-child
+      margin: 0
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 60px
+  text-align: center
+  max-width: 265px
+  width: 100%
+  padding: 12px
+  font-size: 20px
+  line-height: 24px
+
+.btn-green
+  background: $green
+  color: #fff
+  &:hover
+    background: $accent
+    color: #fff
+
+.btn-orange
+  background: $accent
+  color: #fff
+  &:hover
+    background: $green
+    color: #fff
+
+
+.btn-icon
+  fill: #fff
+  margin: 0 22px 0 0
+  width: 36px
+  min-width: 36px
+  height: 36px
+
+.btn-subscribe
+  text-align: left
+  .btn-text
+    max-width: 123px
+
+.btn-group
+  .btn
+    margin: 0 30px 0 0
+    &:last-child
+      margin: 0
+
+.container
+  max-width: 1766px
+
+h1
+  width: 100%
+  font-size: 74px
+  text-transform: uppercase
+  font-weight: bold
+  color: #5C5C5C
+
+
+h2
+  color: $grey
+  font-size: 48px
+  font-weight: bold
+  width: 100%
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+.color-orange
+  color: $accent
+
+.color-green
+  color: $green
+
+.box-text
+  p
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
+
+strong
+  font-weight: bold
+  display: inline-block
+
+.text-transform
+  text-transform: uppercase
+
+//header
+header
+  padding: 44px 0
+  position: absolute
+  z-index: 2
+  width: 100%
+  left: 0
+  top: 0
+  .btn-group
+    .btn
+      width: 260px
+
+.links-cabinet
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #323732
+  font-size: 18px
+  font-weight: bold
+  margin: 0 40px 0 0
+  &__icon
+    background: #F08732
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 50px
+    margin: 0 14px 0 0
+    padding: 10px
+    fill: #fff
+  &:hover
+    color: $accent
+
+.menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 auto 0 70px
+  font-size: 18px
+  font-weight: bold
+  li
+    margin: 0 29px 0 0
+    &:last-child
+      margin: 0
+    a
+      color: #323732
+      &:hover
+        color: $accent
+
+.star
+  position: absolute
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+.star1
+  right: 31%
+  bottom: 114px
+  fill: #B2D235
+  width: 322px
+  height: 322px
+
+.logo
+  max-width: 181px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 44px 0 0
+
+.logo-partner
+  margin: 0 21px 0 0
+  &:last-child
+    margin: 0
+
+//home
+.home
+  position: relative
+  padding: 213px 0 220px
+  &:before
+    content: ''
+    position: absolute
+    background: url("../img/bg1.png") no-repeat center bottom
+      size: 100%
+    width: 1095px
+    height: 940px
+    top: 0
+    right: 0
+  h3
+    font-size: 48px
+    color: #5C5C5C
+  h4
+    font-size: 36px
+  h1
+    margin: 18px 0 16px
+  .price
+    color: $green
+    font-size: 48px
+    font-weight: bold
+    margin: 29px 0 36px
+  .box-text
+    max-width: 559px
+    width: 100%
+    line-height: 24px
+    font-size: 20px
+
+//.about
+.about
+  .box-text
+    max-width: 535px
+    margin: 44px 0 59px
+    font-size: 18px
+    line-height: 22px
+
+.about-box
+  position: relative
+  padding: 32px 32px 49px 42px
+  font-size: 28px
+  color: #fff
+  max-width: 496px
+  p
+    margin: 8px 0 0
+    font-size: 48px
+    font-weight: bold
+
+.about-box-after
+  background: $accent
+
+.about-box-before
+  background: $green
+  margin: -67px 0 0 353px
+
+.about-box__img
+  position: absolute
+  top: -82px
+  right: 15px
+  max-width: 233px
+
+.about-boxes
+  position: relative
+
+.about-box-arrow
+  position: absolute
+  bottom: 20px
+  left: 200px
+
+.star2
+  width: 81px
+  height: 81px
+  fill: #B2D235
+  right: 130px
+  top: -20px
+
+.star3
+  width: 163px
+  height: 163px
+  fill: #F37021
+  right: 120px
+  bottom: -40px
+
+
+.about-content
+  position: relative
+
+
+//stages-work
+.stages-work
+  padding: 86px 0 215px
+  h2
+    margin: 0 auto 51px
+
+
+//question
+.question
+  padding: 28px 0 130px
+  h2
+    margin: 0 auto 30px
+
+.accordion
+  border: none
+    radius: 0
+  width: 100%
+  .card
+    margin: 0 0 30px
+    box-shadow: 0px 10px 0px #EDF1F5
+    border: 1px solid #C8C8C8
+      radius: 0
+    background: #fff
+    &:not(:last-of-type)
+      border: 1px solid #C8C8C8
+        radius: 0
+    &:last-child
+      margin: 0
+  .card-header
+    padding: 20px 22px 20px 33px
+    cursor: pointer
+    display: flex
+    align-items: center
+    font-size: 24px
+    background: transparent
+    border: none
+    h4
+      width: fit-content
+      color: $green
+  .card-header.collapsed
+    .accordion-icon
+      transform: none
+      border-color: $green
+      stroke: green
+    h4
+      color: #323732
+  .card-body
+    padding: 0 22px 41px 33px
+    .box-text
+      max-width: 967px
+      width: 100%
+      color: #323732
+      font-size: 18px
+      line-height: 22px
+
+.accordion-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  fill: none
+  stroke: $accent
+  width: 36px
+  min-width: 36px
+  height: 36px
+  margin: 0 0 0 auto
+  transform: rotate(180deg)
+  border: 2px solid $accent
+    radius: 50%
+  padding: 10px
+
+//callback
+.callback
+  position: relative
+  overflow: hidden
+  h2
+    font-size: 74px
+    text-transform: uppercase
+    margin: 26px 0 45px
+    max-width: 788px
+  h3
+    max-width: 512px
+    font-size: 48px
+    color: $green
+
+.callback-box
+  max-width: 916px
+  background: #5C5C5C
+  padding: 36px 26px 34px 33px
+  &__head
+    display: flex
+    align-items: flex-start
+    margin: 0 0 30px
+  .box-text
+    max-width: 333px
+    width: 100%
+    color: #fff
+  h3
+    text-transform: uppercase
+    color: #fff
+    margin: 0 25px 0 0
+    font-size: 24px
+    font-weight: bold
+
+.callback-img
+  position: relative
+  width: 100%
+  margin: 33px 0 0
+  &:before, &:after
+    content: ''
+    position: absolute
+    z-index: -1
+  &:before
+    background: #F37021
+    width: 784px
+    height: 539px
+    transform: rotate(100.92deg)
+    top: 80px
+    right: -25px
+  &:after
+    transform: rotate(79.84deg)
+    width: 743px
+    height: 260px
+    background: #B2D235
+    top: 263px
+    right: 558px
+
+
+
+.callback-img-box
+  position: absolute
+  right: 37px
+  top: 0
+  width: 100%
+  min-width: 1340px
+  display: flex
+  align-items: center
+  z-index: 1
+  img
+    width: 100%
+    transform: matrix(-1, 0, 0, 1, 0, 0)
+
+.star6
+  top: 1px
+  right: 205px
+  fill: #B2D235
+  width: 129px
+  height: 129px
+
+
+//footer
+footer
+  background: #EDF1F5
+  padding: 27px 0 32px
+  .menu
+    font-size: 24px
+    font-weight: bold
+    text-transform: uppercase
+    justify-content: flex-end
+    li
+      a
+        color: $green
+
+
+.links-subscribe
+  display: flex
+  align-items: center
+  color: #323732
+  font-size: 18px
+  font-weight: bold
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    min-width: 50px
+    margin: 0 14px 0 0
+    fill: $green
+  &:hover
+    color: $green
+
+.footer-bottom
+  margin: 32px 0 0
+  color: #7E7E7E
+
+.links-document
+  color: #7E7E7E
+  margin: 0 47px 0 0
+  &:last-child
+    margin: 0
+  &:hover
+    color: $green
+
+.copyright
+  color: #7E7E7E
+
 
 
 @import "media"
