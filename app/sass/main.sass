@@ -207,6 +207,20 @@ label
     &:last-child
       margin: 0
 
+.btn-animate
+  -webkit-animation: animate-btn 2.5s infinite
+  -o-animation: animate-btn 2.5s infinite
+  animation: animate-btn 2.5s infinite
+
+@keyframes animate-btn
+  0%
+    transform: rotate(0)
+  50%
+    transform: rotate(5deg)
+  100%
+    transform: rotate(-5deg)
+
+
 .container
   max-width: 1766px
 
@@ -357,6 +371,56 @@ header
     line-height: 24px
     font-size: 20px
 
+//mobile-menu
+.mobile-menu
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 5
+  height: 100%
+  width: 100%
+  max-width: 280px
+  overflow-y: auto
+  background: #fff
+  padding: 30px
+  .logo
+    max-width: 180px
+    margin: 0 auto 30px
+
+  .btn-group
+    flex-wrap: wrap
+    .btn
+      margin: 0 0 10px
+  .menu
+    font-size: 18px
+    margin: 20px 0
+    li
+      margin: 0 0 15px
+
+
+
+.btn-close-menu
+  width: 24px
+  height: 24px
+  margin: 0 0 20px auto
+  cursor: pointer
+  position: relative
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 12px
+    top: 0
+    width: 2px
+    height: 100%
+    background: $green
+    border-radius: 3px
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+
 //.about
 .about
   .box-text
@@ -424,7 +488,6 @@ header
 
 //search-clients
 .search-clients
-  padding: 40px 0 0
   h2
     margin: 0 0 28px
     font-size: 75px
@@ -501,6 +564,7 @@ header
   align-items: flex-start
   flex-wrap: wrap
   justify-content: space-between
+  margin-bottom: 0
 
 
 .search-clients-result
@@ -532,6 +596,9 @@ header
     font-weight: bold
     font-size: 75px
     color: $accent
+
+
+
 
 .search-clients-result-image
   position: relative
@@ -570,6 +637,8 @@ header
   right: 22px
   bottom: -50px
   fill: #B2D235
+
+
 
 //information-subscribe
 .information-subscribe
@@ -705,6 +774,9 @@ header
   padding: 28px 0 130px
   h2
     margin: 0 auto 30px
+
+.accordion>.card>.card-header
+  margin: 0
 
 .accordion
   border: none
