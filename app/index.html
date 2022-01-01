@@ -64,12 +64,12 @@
         </a>
 
         <div class="btn-group">
-          <a href="#" class="btn btn-green btn-subscribe">
+          <a href="#" class="btn btn-green btn-subscribe" data-toggle="modal" data-target="#callModal">
             <span class="btn-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#telegram"></use></svg></span>
             <span class="btn-text">подпишись
 на наш канал</span>
           </a>
-          <a href="#" class="btn btn-orange">стать партнером</a>
+          <a href="#" class="btn btn-orange" data-toggle="modal" data-target="#callModal">стать партнером</a>
         </div>
 
         <div class="btn-burger">
@@ -106,7 +106,7 @@
   </div>
 </main>
 
-<section class="about">
+<section class="about" id="about_project">
   <div class="container">
     <div class="row">
       <div class="col-12 offset-lg-1 col-lg-5">
@@ -140,7 +140,8 @@
             <span>ОТ</span>
             <p>дополнительного дохода</p>
           </div>
-          <div class="about-box-arrow wow animate__animated animate__fadeInDown animate__delay-2s"><img src="img/arrow-right.svg" alt=""></div>
+          <div class="about-box-arrow wow animate__animated animate__fadeInDown animate__delay-2s"><img
+              src="img/arrow-right.svg" alt=""></div>
 
           <div class="about-box about-box-before wow animate__animated animate__fadeInRight animate__delay-1s">
             <img src="img/money.png" alt="" class="about-box__img">
@@ -153,15 +154,61 @@
   </div>
 </section>
 
-<section class="stages-work">
+<section class="stages-work" id="stages_work">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
         <h2>Как это работает </h2>
       </div>
 
-      <div class="col-12 col-8 offset-lg-2">
-
+      <div class="col-12 col-lg-8 offset-lg-2">
+        <ul class="stages-work-list">
+          <li class="stages-work-list__item active">
+            <div class="stages-work-list__number">1</div>
+            <div class="stages-work-list__name">
+              <p>Пройти несложную регистрацию на портале trzh.pro</p>
+            </div>
+            <div class="stages-work-list__icon">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#stage-icon1"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="stages-work-list__item">
+            <div class="stages-work-list__number">2</div>
+            <div class="stages-work-list__name">
+              <p>Найти потенциального клиента</p>
+            </div>
+            <div class="stages-work-list__icon">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#stage-icon2"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="stages-work-list__item">
+            <div class="stages-work-list__number">3</div>
+            <div class="stages-work-list__name">
+              <p>Привести клиента в офис продаж, после чего его уже проконсультируют профессиональные менеджеры и оформят сделку.</p>
+            </div>
+            <div class="stages-work-list__icon">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#stage-icon3"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="stages-work-list__item">
+            <div class="stages-work-list__number">4</div>
+            <div class="stages-work-list__name">
+              <p>После того, как клиент оплатит покупку -</p>
+              <p>Вы получите вознаграждение от 1,5% до 2% от стоимости квартиры.</p>
+            </div>
+            <div class="stages-work-list__icon">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#stage-icon4"></use>
+              </svg>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -255,7 +302,8 @@
 
               <div class="information-subscribe-wrapper__body">
                 <p>в нашем telegram канале </p>
-                <a href="#" class="btn btn-border-white">подписаться на канал</a>
+                <a href="#" class="btn btn-border-white btn-animate" data-toggle="modal" data-target="#callModal">подписаться
+                  на канал</a>
               </div>
             </div>
           </div>
@@ -557,6 +605,27 @@
     </div>
   </div>
 </footer>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="callModal" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Оставить заявку</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" class="form">
+          <label>
+            <input type="text" placeholder="имя" name="name">
+          </label>
+          <label><input type="text" placeholder="телефон" name="phone"></label>
+          <button type="submit" class="btn btn-orange">отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"

@@ -207,18 +207,56 @@ label
     &:last-child
       margin: 0
 
+//animate btn
 .btn-animate
-  -webkit-animation: animate-btn 2.5s infinite
-  -o-animation: animate-btn 2.5s infinite
-  animation: animate-btn 2.5s infinite
+  animation: animate-btn 3.2s infinite linear
+  backface-visibility: hidden
 
 @keyframes animate-btn
   0%
-    transform: rotate(0)
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1)
+    animation-timing-function: linear
+
+  6.25%
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(2deg) scale(1, 1)
+    animation-timing-function: linear
+
+  12.5%
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(-2deg) scale(1, 1)
+    animation-timing-function: linear
+
+  18.75%
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(2deg) scale(1, 1)
+    animation-timing-function: linear
+
+  25%
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(-2deg) scale(1, 1)
+    animation-timing-function: linear
+
+  43.75%
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(-2deg) scale(1, 1)
+    animation-timing-function: linear
+
   50%
-    transform: rotate(5deg)
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1)
+    animation-timing-function: linear
+
+  68.75%
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1)
+    animation-timing-function: linear
+
   100%
-    transform: rotate(-5deg)
+    opacity: 1
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1)
+//animate btn
 
 
 .container
@@ -375,7 +413,7 @@ header
 .mobile-menu
   display: none
   position: fixed
-  left: 0
+  right: 0
   top: 0
   z-index: 5
   height: 100%
@@ -485,6 +523,59 @@ header
   padding: 86px 0 215px
   h2
     margin: 0 auto 51px
+
+.stages-work-list
+  width: 100%
+  &__item
+    cursor: pointer
+    transition: .3s ease
+    padding: 20px 50px 20px 32px
+    display: flex
+    align-items: center
+    background: #EDF1F5
+    width: calc(100% - 60px)
+    margin: 0 auto 22px
+    color: #C8C8C8
+    font-size: 20px
+    &:last-child
+      margin: 0 auto
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 66px
+    min-width: 66px
+    height: 66px
+    margin: 0 0 0 auto
+  &__number
+    width: 86px
+    height: 86px
+    min-width: 86px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 2px solid #C8C8C8
+      radius: 50%
+    margin: 0 36px 0 0
+    color: #C8C8C8
+    font-size: 48px
+    font-weight: bold
+  &__name
+    padding: 0 40px 0 0
+
+.stages-work-list__item.active
+  width: 100%
+  box-shadow: 0px 10px 0px #EDF1F5
+  border: 1px solid #C8C8C8
+  background: #fff
+  color: #323732
+  font-size: 24px
+  .stages-work-list__number
+    color: $green
+    border-color: $green
+  .stages-work-list__icon
+    fill: $green
+
 
 //search-clients
 .search-clients
@@ -977,6 +1068,65 @@ footer
 
 .copyright
   color: #7E7E7E
+
+//modal
+.modal-content
+  padding: 30px
+  border: none
+    radius: 0
+  .form
+    flex-wrap: wrap
+    label, button
+      width: 100%
+      max-width: none
+    label
+      margin: 0 0 10px
+
+.modal-header
+  padding: 0
+  border: none
+
+.modal-title
+  font-size: 20px
+  color: $grey
+  text-transform: uppercase
+  font-weight: bold
+  text-align: center
+  margin: 0 auto 30px
+
+.modal-dialog
+  max-width: 500px
+
+.modal-header
+  .close
+    padding: 0
+    position: absolute
+    border: none
+      radius: 0
+    width: 20px
+    height: 20px
+    right: 15px
+    top: 15px
+    margin: 0
+    opacity: 1
+    cursor: pointer
+    z-index: 1
+    &:before, &:after
+      content: ''
+      position: absolute
+      left: 10px
+      top: 0
+      width: 2px
+      height: 100%
+      border-radius: 2px
+      background: $grey
+    &:before
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(135deg)
+
+.modal-body
+  padding: 0
 
 
 

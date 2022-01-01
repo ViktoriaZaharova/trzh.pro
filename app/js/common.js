@@ -38,6 +38,28 @@ $(document).ready(function () {
     });
 });
 
+//плавный скролл
+$(document).ready(function () {
+    $('.go_to').click(function (e) {
+        e.preventDefault();
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length !== 0) {
+            $('html, body').animate({
+                scrollTop: $(scroll_el).offset().top
+            }, 500);
+        }
+        return false;
+    });
+});
+//плавный скролл end
+
+$('.stages-work-list__item').on('click', function () {
+    $('.stages-work-list__item').removeClass('active');
+    $(this).addClass('active');
+});
+
+
+
 // animate number
 $(document).ready(function () {
     var target = $('.benefits__inner');
